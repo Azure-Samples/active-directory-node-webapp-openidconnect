@@ -22,7 +22,7 @@ Next, clone the sample repo and install the NPM.
 
 From your shell or command line:
 
-* `$ git clone git@github.com:AzureADQuickStarts/WebApp-OpenIDConnect-NodeJS.git`
+* `$ git clone git@github.com:AzureADSamples/WebApp-OpenIDConnect-NodeJS.git`
 * `$ npm install`
 
 ### Step 5: Configure your server using config.js
