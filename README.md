@@ -1,7 +1,7 @@
 ---
-services:
-platforms:
-author: azure
+services: active-directory
+platforms: node
+author: dstrockis
 ---
 
 # Integrating Azure AD into a NodeJS web application
@@ -17,7 +17,7 @@ Getting started with the sample is easy. It is configured to run out of the box 
 
 ### Step 1: Register an Azure AD Tenant
 
-To use this sample you will need a Windows Azure Active Directory Tenant. If you're not sure what a tenant is or how you would get one, read [What is an Azure AD tenant](http://technet.microsoft.com/library/jj573650.aspx)? or [Sign up for Azure as an organization](http://azure.microsoft.com/en-us/documentation/articles/sign-up-organization/). These docs should get you started on your way to using Windows Azure AD.
+To use this sample you will need a Windows Azure Active Directory Tenant. If you're not sure what a tenant is or how you would get one, read [What is an Azure AD tenant](http://technet.microsoft.com/library/jj573650.aspx)? or [Sign up for Azure as an organization](http://azure.microsoft.com/documentation/articles/sign-up-organization/). These docs should get you started on your way to using Windows Azure AD.
 
 ### Step 2: Download node.js for your platform
 To successfully use this sample, you need a working installation of Node.js.
@@ -28,7 +28,7 @@ Next, clone the sample repo and install the NPM.
 
 From your shell or command line:
 
-* `$ git clone git@github.com:AzureADSamples/WebApp-OpenIDConnect-NodeJS.git`
+* `$ git clone git@github.com:Azure-Samples/active-directory-node-webapp-openidconnect.git`
 * `$ npm install`
 
 ### Step 5: Configure your server using config.js
@@ -55,4 +55,4 @@ We would like to acknowledge the folks who own/contribute to the following proje
 
 ## About The Code
 
-Code hosted on GitHub under MIT license
+Coming soon...
