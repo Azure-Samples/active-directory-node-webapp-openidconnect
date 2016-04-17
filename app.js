@@ -31,6 +31,7 @@ var passport = require('passport');
 var util = require('util');
 var bunyan = require('bunyan');
 var config = require('./config');
+var cors = require('cors');
 
 // Start QuickStart here
 
@@ -128,6 +129,7 @@ app.configure(function() {
   app.use(passport.session());
   app.use(app.router);
   app.use(express.static(__dirname + '/../../public'));
+  app.use(cors());
 });
 
 //Routes (Section 4)
@@ -188,6 +190,7 @@ app.get('/logout', function(req, res){
   req.logout();
   res.redirect('/');
 });
+
 
 app.listen(3000);
 
