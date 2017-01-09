@@ -29,7 +29,7 @@ Next, clone the sample repo and install the project's NPM dependencies.
 
 From your shell or command line:
 
-* `$ git clone git@github.com:Azure-Samples/active-directory-node-webapp-openidconnect.git`
+* `$ git clone https://github.com/Azure-Samples/active-directory-node-webapp-openidconnect.git`
 * `$ cd active-directory-node-webapp-openidconnect`
 * `$ npm install`
 
