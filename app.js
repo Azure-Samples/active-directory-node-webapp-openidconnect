@@ -71,8 +71,8 @@ var findByEmail = function(email, fn) {
   return fn(null, null);
 };
 
-// Use the OIDCStrategy within Passport. (Section 2) 
-// 
+// Use the OIDCStrategy within Passport. (Section 2)
+//
 //   Strategies in passport require a `validate` function, which accept
 //   credentials (in this case, an OpenID identifier), and invoke a callback
 //   with a user object.
@@ -144,6 +144,7 @@ app.get('/login',
   passport.authenticate('azuread-openidconnect', { failureRedirect: '/login' }),
   function(req, res) {
     log.info('Login was called in the Sample');
+    log.info("Session id: " + req.session.id);
     res.redirect('/');
 });
 
@@ -186,9 +187,19 @@ app.post('/auth/openid/return',
 
 app.get('/logout', function(req, res){
   req.logout();
-  res.redirect('/');
+  req.session.destroy(function(){
+    log.info("destroyed session!");
+    res.redirect('/');
+  });
+  log.info("Session id: " + req.session.id);
 });
 
+app.get('/endsession', function(req, res) {
+  req.session.destroy(function(){
+    log.info("destroyed session!");
+    res.redirect('/');
+  });
+});
 
 app.listen(3000);
 
