@@ -1,7 +1,7 @@
 ---
 services: active-directory
 platforms: nodejs
-author: brandwe
+author: xerners
 ---
 
 # Integrating Azure AD into a NodeJS web application
